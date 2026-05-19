@@ -33,7 +33,7 @@ Pod::Spec.new do |s|
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-  s.source_files = "MapboxCoreNavigation/**/*.{h,m,swift}"
+  s.source_files = ["MapboxCoreNavigation/**/*.{h,m,swift}", "MapboxCoreNavigationObjc/**/*.{h,m,swift}"]
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
