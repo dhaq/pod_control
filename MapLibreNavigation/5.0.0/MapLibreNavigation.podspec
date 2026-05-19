@@ -53,7 +53,7 @@ Pod::Spec.new do |s|
   s.dependency "MapLibreCoreNavigation", "#{s.version.to_s}"
   s.dependency 'MapLibre', '6.25.1'
   # s.dependency "ViettelMapSDK", "~> 1.0.3"
-  # s.dependency "Solar", "~> 2.1"
+  s.dependency "Solar", "~> 2.1"
   # s.dependency "ViettelMapSpeechSwift", "~> 0.1.0-ios.9.0"
   s.swift_version = "5.0"
 
