@@ -46,7 +46,11 @@ Pod::Spec.new do |s|
 
   s.requires_arc = true
   s.module_name = "MapboxNavigation"
-
+  s.pod_target_xcconfig = {
+    'DEFINES_MODULE' => 'YES'
+  }
+  s.static_framework = true
+  
   # s.dependency "ViettelMapCoreNavigation", "#{s.version.to_s}"
   # s.dependency "ViettelMapSDK", "~> 1.0.3"
   # s.dependency "Solar", "~> 2.1"
