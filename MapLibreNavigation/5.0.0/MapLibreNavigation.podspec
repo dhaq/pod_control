@@ -41,6 +41,10 @@ Pod::Spec.new do |s|
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
   s.resources = ['MapboxNavigation/Resources/*/*', 'MapboxNavigation/Resources/*', 'MapboxCoreNavigation/Resources/*/*', 'MapboxCoreNavigation/Resources/*']
+  s.public_header_files = [
+  "MapboxNavigation/**/*.h",
+  "MapboxCoreNavigation/**/*.h"
+]
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
