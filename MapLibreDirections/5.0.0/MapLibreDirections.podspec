@@ -44,7 +44,7 @@ Pod::Spec.new do |s|
 #   "MapboxDirectionsObjc/**/*.{h,m}"
 # ]
   s.source_files  = ["MapboxDirections", "MapboxDirections/*/*", "MapboxDirectionsObjc", "MapboxDirectionsObjc/*/*"]
-  # s.exclude_files = ["MapboxDirectionsObjc/include/MapboxDirections.h"]
+  s.exclude_files = ["MapboxDirectionsObjc/include/MapboxDirections.h"]
 
 # s.public_header_files = "MapboxDirectionsObjc/include/*.h"
 # s.header_mappings_dir = "MapboxDirectionsObjc/include"
