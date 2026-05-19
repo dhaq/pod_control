@@ -33,7 +33,9 @@ Pod::Spec.new do |s|
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-  s.source_files = ["MapboxCoreNavigation/**/*.{h,m,swift}", "MapboxCoreNavigationObjc/**/*.{h,m,swift}"]
+  s.source_files = ["MapboxCoreNavigation/**/*.swift", "MapboxCoreNavigationObjc/**/*.{h,m}"]
+  s.public_header_files = "MapboxCoreNavigationObjc/*.h"
+  s.exclude_files       = "MapboxCoreNavigationObjc/include/MapboxCoreNavigation.h"
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
