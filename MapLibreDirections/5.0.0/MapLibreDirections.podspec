@@ -57,6 +57,10 @@ s.public_header_files = "MapboxDirectionsObjc/include/*.h"
   s.requires_arc = true
   s.module_name = "MapboxDirections"
   s.swift_version = "5.0"
+  s.pod_target_xcconfig = {
+    'DEFINES_MODULE' => 'YES',
+    'SWIFT_INCLUDE_PATHS' => '$(PODS_TARGET_SRCROOT)/MapboxDirectionsObjc'
+  }
 
   s.dependency "Polyline", "~> 5.1.0"
   s.dependency "Turf", "~> 0.2.2"
