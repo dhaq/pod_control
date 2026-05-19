@@ -47,12 +47,15 @@ Pod::Spec.new do |s|
   s.preserve_paths      = "MapboxDirectionsObjc/module.modulemap"
 
   # Generate module.modulemap so Swift can `import MapboxDirectionsObjc`
+  # Use explicit headers (not umbrella) to avoid relative-path errors
   s.prepare_command = <<-CMD
     cat > MapboxDirectionsObjc/module.modulemap <<EOF
 module MapboxDirectionsObjc {
-  umbrella header "include/MapboxDirections.h"
+  header "MBAttribute.h"
+  header "MBLaneIndication.h"
+  header "MBRoadClasses.h"
+  header "MBRouteOptions.h"
   export *
-  module * { export * }
 }
 EOF
   CMD
