@@ -40,7 +40,16 @@ Pod::Spec.new do |s|
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-  s.resources = ['MapboxNavigation/Resources/*/*', 'MapboxNavigation/Resources/*']
+  # s.resources = ['MapboxNavigation/Resources/*/*', 'MapboxNavigation/Resources/*']
+  s.source_files        = [
+    "MapboxNavigation/**/*.swift",
+    "MapboxNavigationObjc/**/*.{h,m}"
+  ]
+  s.public_header_files = "MapboxNavigationObjc/include/*.h"
+  s.header_dir = "MapboxNavigation"
+  s.pod_target_xcconfig = {
+  'DEFINES_MODULE' => 'YES'
+  }
 #   s.public_header_files = [
 #   "MapboxNavigation/**/*.h",
 #   "MapboxCoreNavigation/**/*.h"
