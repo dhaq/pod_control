@@ -36,31 +36,37 @@ Pod::Spec.new do |s|
   s.source = { :git => "https://github.com/flitsmeister/mapbox-directions-swift", :tag => "0.23.3" }
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-# s.source_files  = ["Sources/MapboxDirections", "Sources/MapboxDirections/*/*"]
-  # s.source_files  = ["Sources/MapboxDirections", "Sources/MapboxDirections/*/*", "Sources/CMapboxDirections", "Sources/CMapboxDirections/*/*"]
-  # s.exclude_files = ["Sources/CMapboxDirections/CMapboxDirections.h"]
-#   s.source_files = [
-#   "MapboxDirections/**/*.{swift}",
-#   "MapboxDirectionsObjc/**/*.{h,m}"
-# ]
-  s.source_files  = ["MapboxDirections", "MapboxDirections/*/*", "MapboxDirectionsObjc", "MapboxDirectionsObjc/*/*"]
-  # s.exclude_files = ["MapboxDirectionsObjc/include/MapboxDirections.h"]
 
-s.public_header_files = "MapboxDirectionsObjc/include/*.h"
-# s.header_mappings_dir = "MapboxDirectionsObjc/include"
-# s.pod_target_xcconfig = {
-#   'DEFINES_MODULE' => 'YES'
-# }
+  # Swift + ObjC source files compiled into the same target
+  s.source_files        = [
+    "MapboxDirections/**/*.swift",
+    "MapboxDirectionsObjc/**/*.{h,m}"
+  ]
+  s.public_header_files = "MapboxDirectionsObjc/*.h"
+  s.exclude_files       = "MapboxDirectionsObjc/include/MapboxDirections.h"
+  s.preserve_paths      = "MapboxDirectionsObjc/module.modulemap"
+
+  # Generate module.modulemap so Swift can `import MapboxDirectionsObjc`
+  s.prepare_command = <<-CMD
+    cat > MapboxDirectionsObjc/module.modulemap <<EOF
+module MapboxDirectionsObjc {
+  umbrella header "include/MapboxDirections.h"
+  export *
+  module * { export * }
+}
+EOF
+  CMD
+
+  s.pod_target_xcconfig = {
+    'DEFINES_MODULE'      => 'YES',
+    'SWIFT_INCLUDE_PATHS' => '$(PODS_TARGET_SRCROOT)/MapboxDirectionsObjc'
+  }
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
   s.requires_arc = true
-  s.module_name = "MapboxDirections"
+  s.module_name  = "MapboxDirections"
   s.swift_version = "5.0"
-  s.pod_target_xcconfig = {
-    'DEFINES_MODULE' => 'YES',
-    'SWIFT_INCLUDE_PATHS' => '$(PODS_TARGET_SRCROOT)/MapboxDirectionsObjc'
-  }
 
   s.dependency "Polyline", "~> 5.1.0"
   s.dependency "Turf", "~> 0.2.2"
