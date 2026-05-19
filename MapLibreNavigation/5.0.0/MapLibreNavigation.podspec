@@ -53,8 +53,6 @@ Pod::Spec.new do |s|
   s.pod_target_xcconfig = {
     'DEFINES_MODULE' => 'YES'
   }
-  s.static_framework = true
-  
   # s.dependency "ViettelMapCoreNavigation", "#{s.version.to_s}"
   # s.dependency "ViettelMapSDK", "~> 1.0.3"
   # s.dependency "Solar", "~> 2.1"
