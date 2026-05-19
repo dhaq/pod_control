@@ -42,8 +42,11 @@ Pod::Spec.new do |s|
     "MapboxDirections/**/*.swift",
     "MapboxDirectionsObjc/**/*.{h,m}"
   ]
-  s.public_header_files = "MapboxDirectionsObjc/include`/*.h"
+  s.public_header_files = "MapboxDirectionsObjc/include/*.h"
   s.header_dir = "MapboxDirections"
+  s.pod_target_xcconfig = {
+  'DEFINES_MODULE' => 'YES'
+  }
   # s.exclude_files       = "MapboxDirectionsObjc/include/MapboxDirections.h"
   # s.preserve_paths      = "MapboxDirectionsObjc/module.modulemap"
 
