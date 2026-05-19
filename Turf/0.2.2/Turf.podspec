@@ -2,16 +2,12 @@ Pod::Spec.new do |s|
 
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-  s.name = "MapLibreCoreNavigation"
-  s.version = "5.0.0"
-  s.summary = "Core components for turn-by-turn navigation on iOS."
+  s.name = "Turf"
+  s.version = "0.2.2"
+  s.summary = "Simple spatial analysis."
+  s.description = "A spatial analysis library written in Swift for native iOS, macOS, tvOS, watchOS, and Linux applications, ported from Turf.js."
 
-  s.description  = <<-DESC
-  Mapbox Core Navigation provides the core spatial and timing logic for turn-by-turn navigation along a route. For a complete turn-by-turn navigation interface, use the Mapbox Navigation SDK for iOS (MapboxNavigation).
-                   DESC
-
-  s.homepage = "https://docs.mapbox.com/ios/navigation/"
-  s.documentation_url = "https://docs.mapbox.com/ios/api/navigation/"
+  s.homepage = "https://github.com/mapbox/turf-swift"
 
   # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
@@ -24,27 +20,24 @@ Pod::Spec.new do |s|
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-  s.ios.deployment_target = "13.0"
-
+  s.ios.deployment_target = "8.0"
+  s.osx.deployment_target = "10.10"
+  s.tvos.deployment_target = "9.0"
+  s.watchos.deployment_target = "2.0"
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-  s.source = { :git => "https://github.com/maplibre/maplibre-navigation-ios", :tag => "4.1.0" }
+  s.source = { :git => "https://github.com/mapbox/turf-swift.git", :tag => "v#{s.version.to_s}" }
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-  s.source_files = "MapboxCoreNavigation/**/*.{h,m,swift}"
+  s.source_files = "Sources/**/*{.swift,.h}"
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
   s.requires_arc = true
-  s.module_name = "MapboxCoreNavigation"
+  s.module_name = "Turf"
 
-  # s.dependency "ViettelMapNavigationNative", "~> 6.2.1"
-  # s.dependency "ViettelMapDirections", "~> 1.0.3"
-  # s.dependency "ViettelMapMobileEvents"        # Always pin to a patch release if pre-1.0
-  s.dependency "Turf", "0.2.2"                       # Always pin to a patch release if pre-1.0
-
-  s.swift_version = "5.0"
+  s.frameworks = 'CoreLocation'
 
 end
