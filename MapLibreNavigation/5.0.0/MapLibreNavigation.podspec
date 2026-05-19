@@ -35,12 +35,11 @@ Pod::Spec.new do |s|
   # s.source_files = "MapboxNavigation/**/*.{h,m,swift}"
   s.source_files = [
     "MapboxNavigation/**/*.{h,m,swift}",
-    "MapboxCoreNavigation/**/*.{h,m,swift}"
   ]
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-  s.resources = ['MapboxNavigation/Resources/*/*', 'MapboxNavigation/Resources/*', 'MapboxCoreNavigation/Resources/*/*', 'MapboxCoreNavigation/Resources/*']
+  s.resources = ['MapboxNavigation/Resources/*/*', 'MapboxNavigation/Resources/*']
 #   s.public_header_files = [
 #   "MapboxNavigation/**/*.h",
 #   "MapboxCoreNavigation/**/*.h"
@@ -50,9 +49,9 @@ Pod::Spec.new do |s|
 
   s.requires_arc = true
   s.module_name = "MapboxNavigation"
-  s.pod_target_xcconfig = {
-    'DEFINES_MODULE' => 'YES'
-  }
+  # s.pod_target_xcconfig = {
+  #   'DEFINES_MODULE' => 'YES'
+  # }
   # s.dependency "ViettelMapCoreNavigation", "#{s.version.to_s}"
   # s.dependency "ViettelMapSDK", "~> 1.0.3"
   # s.dependency "Solar", "~> 2.1"
