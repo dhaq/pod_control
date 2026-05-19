@@ -44,26 +44,26 @@ Pod::Spec.new do |s|
   ]
   s.public_header_files = "MapboxDirectionsObjc/*.h"
   s.exclude_files       = "MapboxDirectionsObjc/include/MapboxDirections.h"
-  s.preserve_paths      = "MapboxDirectionsObjc/module.modulemap"
+  # s.preserve_paths      = "MapboxDirectionsObjc/module.modulemap"
 
   # Generate module.modulemap so Swift can `import MapboxDirectionsObjc`
   # Use explicit headers (not umbrella) to avoid relative-path errors
-  s.prepare_command = <<-CMD
-    cat > MapboxDirectionsObjc/module.modulemap <<EOF
-module MapboxDirectionsObjc {
-  header "MBAttribute.h"
-  header "MBLaneIndication.h"
-  header "MBRoadClasses.h"
-  header "MBRouteOptions.h"
-  export *
-}
-EOF
-  CMD
+#   s.prepare_command = <<-CMD
+#     cat > MapboxDirectionsObjc/module.modulemap <<EOF
+# module MapboxDirectionsObjc {
+#   header "MBAttribute.h"
+#   header "MBLaneIndication.h"
+#   header "MBRoadClasses.h"
+#   header "MBRouteOptions.h"
+#   export *
+# }
+# EOF
+#   CMD
 
-  s.pod_target_xcconfig = {
-    'DEFINES_MODULE'      => 'YES',
-    'SWIFT_INCLUDE_PATHS' => '$(PODS_TARGET_SRCROOT)/MapboxDirectionsObjc'
-  }
+#   s.pod_target_xcconfig = {
+#     'DEFINES_MODULE'      => 'YES',
+#     'SWIFT_INCLUDE_PATHS' => '$(PODS_TARGET_SRCROOT)/MapboxDirectionsObjc'
+#   }
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
