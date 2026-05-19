@@ -58,7 +58,7 @@ s.source_files  = ["Sources/MapboxDirections", "Sources/MapboxDirections/*/*"]
   s.module_name = "MapboxDirections"
   s.swift_version = "5.0"
 
-  s.dependency "Polyline", "~> 4.2"
+  s.dependency "Polyline", "~> 5.1.0"
   s.dependency "Turf", "~> 0.2.2"
 
 end
