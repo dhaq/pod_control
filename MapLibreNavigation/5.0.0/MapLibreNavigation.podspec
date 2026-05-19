@@ -29,7 +29,10 @@ Pod::Spec.new do |s|
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
   # s.source = { :git => "https://github.com/maplibre/maplibre-navigation-ios", :tag => "4.1.0" }
-  s.source = { :git => "https://github.com/dhaq/maplibre-navigation-ios", :tag => "1.0.0" }
+  s.source = {
+  :git => "https://github.com/dhaq/maplibre-navigation-ios",
+  :branch => "main"
+}
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
