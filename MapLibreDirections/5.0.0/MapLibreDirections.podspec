@@ -39,13 +39,13 @@ Pod::Spec.new do |s|
 
   # s.source_files  = ["Sources/MapboxDirections", "Sources/MapboxDirections/*/*", "Sources/CMapboxDirections", "Sources/CMapboxDirections/*/*"]
   # s.exclude_files = ["Sources/CMapboxDirections/CMapboxDirections.h"]
-  s.source_files  = ["MapboxDirections", "MapboxDirections/*/*", "CMapboxDirections", "CMapboxDirections/*/*"]
-  s.exclude_files = ["CMapboxDirections/CMapboxDirections.h"]
+  s.source_files  = ["MapboxDirections", "/MapboxDirections/*/*", "MapboxDirectionsObjc", "MapboxDirectionsObjc/*/*"]
+  s.exclude_files = ["MapboxDirectionsObjc/include/MapboxDirections.h"]
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
   s.requires_arc = true
-  s.module_name = "MapLibreDirections"
+  s.module_name = "MapboxDirections"
   s.swift_version = "5.0"
 
   s.dependency "Polyline", "~> 4.2"
