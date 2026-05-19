@@ -43,7 +43,7 @@ Pod::Spec.new do |s|
     "MapboxDirectionsObjc/**/*.{h,m}"
   ]
   s.public_header_files = "MapboxDirectionsObjc/*.h"
-  s.exclude_files       = "MapboxDirectionsObjc/include/MapboxDirections.h"
+  # s.exclude_files       = "MapboxDirectionsObjc/include/MapboxDirections.h"
   # s.preserve_paths      = "MapboxDirectionsObjc/module.modulemap"
 
   # Generate module.modulemap so Swift can `import MapboxDirectionsObjc`
