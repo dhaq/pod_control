@@ -39,8 +39,15 @@ Pod::Spec.new do |s|
 
   # s.source_files  = ["Sources/MapboxDirections", "Sources/MapboxDirections/*/*", "Sources/CMapboxDirections", "Sources/CMapboxDirections/*/*"]
   # s.exclude_files = ["Sources/CMapboxDirections/CMapboxDirections.h"]
-  s.source_files  = ["MapboxDirections", "MapboxDirections/*/*", "MapboxDirectionsObjc", "MapboxDirectionsObjc/*/*"]
-  s.exclude_files = ["MapboxDirectionsObjc/include/MapboxDirections.h"]
+  # s.source_files  = ["MapboxDirections", "MapboxDirections/*/*", "MapboxDirectionsObjc", "MapboxDirectionsObjc/*/*"]
+  # s.exclude_files = ["MapboxDirectionsObjc/include/MapboxDirections.h"]
+  s.source_files = [
+  "MapboxDirections/**/*.{swift}",
+  "MapboxDirectionsObjc/**/*.{h,m}"
+]
+
+s.public_header_files = "MapboxDirectionsObjc/include/*.h"
+s.header_mappings_dir = "MapboxDirectionsObjc/include"
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
