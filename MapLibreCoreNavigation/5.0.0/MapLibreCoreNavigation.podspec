@@ -37,9 +37,18 @@ Pod::Spec.new do |s|
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-  s.source_files = ["MapboxCoreNavigation/**/*.swift", "MapboxCoreNavigationObjc/**/*.{h,m}"]
-  s.public_header_files = "MapboxCoreNavigationObjc/*.h"
-  s.exclude_files       = "MapboxCoreNavigationObjc/include/MapboxCoreNavigation.h"
+  # s.source_files = ["MapboxCoreNavigation/**/*.swift", "MapboxCoreNavigationObjc/**/*.{h,m}"]
+  # s.public_header_files = "MapboxCoreNavigationObjc/*.h"
+  # s.exclude_files       = "MapboxCoreNavigationObjc/include/MapboxCoreNavigation.h"
+  s.source_files        = [
+    "MapboxCoreNavigation/**/*.swift",
+    "MapboxCoreNavigationObjc/**/*.{h,m}"
+  ]
+  s.public_header_files = "MapboxCoreNavigationObjc/include/*.h"
+  s.header_dir = "MapboxCoreNavigation"
+  s.pod_target_xcconfig = {
+  'DEFINES_MODULE' => 'YES'
+  }
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
