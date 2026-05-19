@@ -68,7 +68,7 @@ Pod::Spec.new do |s|
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
   s.requires_arc = true
-  s.module_name  = "MapboxDirections"
+  s.module_name  = "MapLibreDirections"
   s.swift_version = "5.0"
 
   s.dependency "Polyline", "~> 5.1.0"
