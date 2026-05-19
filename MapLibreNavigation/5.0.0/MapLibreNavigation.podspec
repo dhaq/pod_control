@@ -45,7 +45,7 @@ Pod::Spec.new do |s|
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
   s.requires_arc = true
-  # s.module_name = "MapboxNavigation"
+  s.module_name = "MapboxNavigation"
 
   # s.dependency "ViettelMapCoreNavigation", "#{s.version.to_s}"
   # s.dependency "ViettelMapSDK", "~> 1.0.3"
