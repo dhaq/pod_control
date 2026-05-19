@@ -40,9 +40,9 @@ Pod::Spec.new do |s|
   # Swift + ObjC source files compiled into the same target
   s.source_files        = [
     "MapboxDirections/**/*.swift",
-    "MapboxDirectionsObjc/**/*.{h,m}"
+    # "MapboxDirectionsObjc/**/*.{h,m}"
   ]
-  s.public_header_files = "MapboxDirectionsObjc/*.h"
+  # s.public_header_files = "MapboxDirectionsObjc/*.h"
   # s.exclude_files       = "MapboxDirectionsObjc/include/MapboxDirections.h"
   # s.preserve_paths      = "MapboxDirectionsObjc/module.modulemap"
 
