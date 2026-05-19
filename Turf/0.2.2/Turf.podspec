@@ -27,7 +27,7 @@ Pod::Spec.new do |s|
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-  s.source = { :git => "https://github.com/mapbox/turf-swift.git", :tag => "v#{s.version.to_s}" }
+  s.source = { :git => "https://github.com/flitsmeister/turf-swift", :tag => "#{s.version.to_s}" }
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
