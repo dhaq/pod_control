@@ -33,24 +33,24 @@ Pod::Spec.new do |s|
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-  s.source = { :git => "https://github.com/flitsmeister/mapbox-directions-swift", :tag => "0.23.3" }
+  s.source = { :git => "https://github.com/mapbox/mapbox-directions-swift", :tag => "0.23.3" }
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-
+s.source_files  = ["Sources/MapboxDirections", "Sources/MapboxDirections/*/*"]
   # s.source_files  = ["Sources/MapboxDirections", "Sources/MapboxDirections/*/*", "Sources/CMapboxDirections", "Sources/CMapboxDirections/*/*"]
   # s.exclude_files = ["Sources/CMapboxDirections/CMapboxDirections.h"]
-  s.source_files = [
-  "MapboxDirections/**/*.{swift}",
-  "MapboxDirectionsObjc/**/*.{h,m}"
-]
+#   s.source_files = [
+#   "MapboxDirections/**/*.{swift}",
+#   "MapboxDirectionsObjc/**/*.{h,m}"
+# ]
   # s.source_files  = ["MapboxDirections", "MapboxDirections/*/*", "MapboxDirectionsObjc", "MapboxDirectionsObjc/*/*"]
-  s.exclude_files = ["MapboxDirectionsObjc/include/MapboxDirections.h"]
+  # s.exclude_files = ["MapboxDirectionsObjc/include/MapboxDirections.h"]
 
-s.public_header_files = "MapboxDirectionsObjc/include/*.h"
-s.header_mappings_dir = "MapboxDirectionsObjc/include"
-s.pod_target_xcconfig = {
-  'DEFINES_MODULE' => 'YES'
-}
+# s.public_header_files = "MapboxDirectionsObjc/include/*.h"
+# s.header_mappings_dir = "MapboxDirectionsObjc/include"
+# s.pod_target_xcconfig = {
+#   'DEFINES_MODULE' => 'YES'
+# }
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
