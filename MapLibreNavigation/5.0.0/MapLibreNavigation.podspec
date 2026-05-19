@@ -47,7 +47,7 @@ Pod::Spec.new do |s|
   # s.dependency "ViettelMapSDK", "~> 1.0.3"
   # s.dependency "Solar", "~> 2.1"
   # s.dependency "ViettelMapSpeechSwift", "~> 0.1.0-ios.9.0"
-
+  s.dependency "Turf", "~> 0.2.2" 
   s.swift_version = "5.0"
 
 end
