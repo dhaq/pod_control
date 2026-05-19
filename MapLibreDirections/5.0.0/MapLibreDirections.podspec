@@ -33,7 +33,7 @@ Pod::Spec.new do |s|
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-  s.source = { :git => "https://github.com/mapbox/mapbox-directions-swift", :tag => "1.1.0" }
+  s.source = { :git => "https://github.com/mapbox/mapbox-directions-swift", :tag => "v1.1.0" }
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 s.source_files  = ["Sources/MapboxDirections", "Sources/MapboxDirections/*/*"]
